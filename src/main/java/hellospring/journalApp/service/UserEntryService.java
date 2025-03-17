@@ -20,11 +20,17 @@ public class UserEntryService {
 
     private static final PasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
 
-    public User saveEntry(User user){
+    public User saveNewUser(User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRoles(new ArrayList<>());
+        List<String> roles=new ArrayList<>();
+        roles.add("User");
+        user.setRoles(roles);
         userentryrepositry.save(user);
         return user;
+    }
+
+    public void saveUser(User user){
+        userentryrepositry.save(user);
     }
 
     public List<User> findAll(){

@@ -32,7 +32,7 @@ public class UserEntryController {
         User userInDb=userentryservice.findByUserName(userName);
             userInDb.setUserName(user.getUserName());
             userInDb.setPassword(user.getPassword());
-            userentryservice.saveEntry(userInDb);
+            userentryservice.saveNewUser(userInDb);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
