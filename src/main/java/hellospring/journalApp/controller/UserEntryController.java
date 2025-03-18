@@ -21,10 +21,6 @@ public class UserEntryController {
     @Autowired
     private UserEntryRepositry userEntryRepositry;
 
-    @GetMapping
-    public List<User> getAllUser(){
-        return userentryservice.findAll();
-    }
     @PutMapping
     public ResponseEntity<?> updateUser(@RequestBody User user){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
