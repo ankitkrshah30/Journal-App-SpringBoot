@@ -1,6 +1,0 @@
-Spring:
-  data:
-    mongodb:
-      uri: mongodb+srv://Ankit29:Ankit30@cluster0.zrmdl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-      database: journaldb
-      auto-index-creation: true
