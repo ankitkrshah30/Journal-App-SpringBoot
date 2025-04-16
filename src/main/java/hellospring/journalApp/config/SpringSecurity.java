@@ -32,9 +32,9 @@ public class SpringSecurity{
     }
 
 
-    public void configureGlobal(AuthenticationManagerBuilder auth)throws Exception{
+    /*public void configureGlobal(AuthenticationManagerBuilder auth)throws Exception{
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
-    }
+    }*///No use of writing this as this is now deprecated and spring does it by its own
 
     @Bean
     public PasswordEncoder passwordEncoder(){
